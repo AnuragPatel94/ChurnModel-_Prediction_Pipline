@@ -64,8 +64,18 @@ python api.py
 ```
 
 ## API Usage
+curl -X POST http://localhost:8000/predict \
+  -H "Content-Type: application/json" \
+  -d '{
+    "age": 45,
+    "tenure_months": 24,
+    "monthly_charges": 79.99,
+    "total_charges": 1920.00,
+    "num_support_calls": 3
+  }'
 
 /////poweshell
+
 $body = @{
   age = 45
   tenure_months = 24
