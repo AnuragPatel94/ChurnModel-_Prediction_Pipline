@@ -74,7 +74,8 @@ curl -X POST http://localhost:8000/predict \
     "num_support_calls": 3
   }'
 
-/////poweshell
+poweshell
+
 
 Invoke-RestMethod `
   -Uri "http://localhost:8000/predict" `
@@ -87,6 +88,19 @@ Invoke-RestMethod `
     "total_charges": 1920.00,
     "num_support_calls": 3
   }'
+
+$body = @{
+  age = 45
+  tenure_months = 24
+ monthly_charges = 79.99
+   total_charges = 1920.00
+   num_support_calls = 3
+} | ConvertTo-Json
+Invoke-RestMethod -Uri "http://localhost:8000/predict" `
+ -Method Post `
+ -Body $body `
+-ContentType "application/json"
+ 14a977d (Two way how to use api)
 
 churn churn_probability
 ----- -----------------
