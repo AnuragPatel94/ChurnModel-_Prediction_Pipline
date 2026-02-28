@@ -19,7 +19,7 @@ class CustomerData(BaseModel):
 
 @app.get("/health")
 def health():
-    return {"status": "healthy"}
+    return {"health": "health"}
 
 @app.post("/predict")
 def predict(data: CustomerData):
