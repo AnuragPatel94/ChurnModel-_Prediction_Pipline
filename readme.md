@@ -76,17 +76,17 @@ curl -X POST http://localhost:8000/predict \
 
 /////poweshell
 
-$body = @{
-  age = 45
-  tenure_months = 24
- monthly_charges = 79.99
-   total_charges = 1920.00
-   num_support_calls = 3
-} | ConvertTo-Json
-Invoke-RestMethod -Uri "http://localhost:8000/predict" `
- -Method Post `
- -Body $body `
--ContentType "application/json"
+Invoke-RestMethod `
+  -Uri "http://localhost:8000/predict" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body '{ 
+    "age": 45,
+    "tenure_months": 24,
+    "monthly_charges": 79.99,
+    "total_charges": 1920.00,
+    "num_support_calls": 3
+  }'
 
 churn churn_probability
 ----- -----------------
