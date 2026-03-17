@@ -1,6 +1,6 @@
 # Churn Model MLOps Demo
 
-A simple demonstration of MLOps practices for a customer churn prediction model.
+A simple demonstration of MLOps practices for a telecome industry customer churn prediction model.
 
 ## What Does This Model Do?
 
@@ -9,7 +9,7 @@ A simple demonstration of MLOps practices for a customer churn prediction model.
 Imagine you run a telecom company with thousands of customers. Some customers are happy and stay for years, while others leave (churn) after a few months. This model predicts which customers are likely to leave.
 
 **Example Customer:**
-- **Sarah** is 45 years old
+- **Vikash** is 45 years old
 - Been a customer for 24 months
 - Pays $79.99/month
 - Total spent: $1,920
@@ -23,7 +23,7 @@ Imagine you run a telecom company with thousands of customers. Some customers ar
 }
 ```
 
-**Translation:** Sarah has a **73% chance of canceling her subscription**. Why? She's calling support frequently (unhappy) and paying relatively high fees. Your business can now:
+**Translation:** Vikash has a **73% chance of canceling her subscription**. Why? She's calling support frequently (unhappy) and paying relatively high fees. Your business can now:
 - Offer her a discount
 - Reach out with personalized support
 - Prevent losing her before she leaves
