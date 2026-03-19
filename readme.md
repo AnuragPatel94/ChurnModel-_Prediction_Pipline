@@ -89,6 +89,7 @@ Invoke-RestMethod `
     "num_support_calls": 3
   }'
 
+HEAD
 $body = @{
   age = 45
   tenure_months = 24
@@ -101,6 +102,19 @@ Invoke-RestMethod -Uri "http://localhost:8000/predict" `
  -Body $body `
 -ContentType "application/json"
  14a977d (Two way how to use api)
+=======
+Invoke-RestMethod `
+  -Uri "http://localhost:8000/predict" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body '{ 
+    "age": 45,
+    "tenure_months": 24,
+    "monthly_charges": 79.99,
+    "total_charges": 1920.00,
+    "num_support_calls": 3
+  }'
+>>>>>>> 7cf1a54 (Refactor PowerShell script for REST API call)
 
 churn churn_probability
 ----- -----------------
