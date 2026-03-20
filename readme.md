@@ -97,12 +97,13 @@ $body = @{
    total_charges = 1920.00
    num_support_calls = 3
 } | ConvertTo-Json
+
 Invoke-RestMethod -Uri "http://localhost:8000/predict" `
  -Method Post `
  -Body $body `
 -ContentType "application/json"
  14a977d (Two way how to use api)
-=======
+
 Invoke-RestMethod `
   -Uri "http://localhost:8000/predict" `
   -Method Post `
@@ -114,7 +115,7 @@ Invoke-RestMethod `
     "total_charges": 1920.00,
     "num_support_calls": 3
   }'
->>>>>>> 7cf1a54 (Refactor PowerShell script for REST API call)
+7cf1a54 (Refactor PowerShell script for REST API call)
 
 churn churn_probability
 ----- -----------------
