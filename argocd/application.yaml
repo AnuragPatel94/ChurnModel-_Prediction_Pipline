@@ -6,8 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/your-org/churn-model
-    targetRevision: HEAD
+    repoURL: https://github.com/AnuragPatel94/ChurnModel-_Pediction_Pipline.git
     path: k8s
   destination:
     server: https://kubernetes.default.svc
