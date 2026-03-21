@@ -1,5 +1,7 @@
-models/*.pkl
-*.pyc
 __pycache__/
-.dvc/cache
-.dvc/tmp
+*.pyc
+.git/
+.dvc/
+.dvc/cache/
+models/*.pkl
+.env
