@@ -61,7 +61,7 @@ jobs:
     # 9️⃣ Push model (Option A: Direct S3)
     - name: Upload model to S3
       run: |
-        aws s3 cp models/churn_model.pkl s3://${{ env.S3_BUCKET }}/models/churn_model.pkl
+        aws s3 cp models/churnmodel-bucket-anu.pkl s3://churnmodel-bucket-anumodels/churn_model.pkl
 
     # 🔟 (Optional) Use DVC instead
     # - name: DVC push
