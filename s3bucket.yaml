@@ -86,4 +86,4 @@ jobs:
         else
           git commit -m "Update model path [skip ci]"
           git push
-        
+        fi
