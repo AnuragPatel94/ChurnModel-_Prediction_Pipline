@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
 
 env:
-  AWS_REGION: us-east-1
-  S3_BUCKET: churn-model-bucket
+  AWS_REGION: ap-south-1
+  S3_BUCKET: churnmodel-bucket-anu
 
 jobs:
   train-and-deploy:
@@ -61,12 +61,12 @@ jobs:
     # 9️⃣ Upload model to S3
     - name: Upload model to S3
       run: |
-        aws s3 cp models/churn_model.pkl s3://${{ env.S3_BUCKET }}/models/churn_model.pkl
+        aws s3 cp models/churn_model.pkl s3://churnmodel-bucket-anu/models/churn_model.pkl
 
     # 🔟 Update inference.yaml
     - name: Update inference.yaml
       run: |
-        MODEL_URI="s3://${{ env.S3_BUCKET }}/models/churn_model.pkl"
+        MODEL_URI="s3://churnmodel-bucket-anu/models/churn_model.pkl"
         sed -i "s|storageUri: .*|storageUri: $MODEL_URI|g" k8s/inference.yaml
 
     # 1️⃣1️⃣ Commit changes safely
